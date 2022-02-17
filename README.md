@@ -1,4 +1,5 @@
 ## 项目结构
+```bash
 ├── README.md
 ├── build           编译相关代码
 ├── docs            文档
@@ -19,16 +20,19 @@
 ├── scripts          脚本
 ├── tsconfig.json 
 └── typings .d.ts    全局声明
+```
 
 ## 搭建 `monorepo` 环境
 1. `monorepo` 简介
     1. monorepo 全称 monolithic repository （巨型仓库） 是一种管理项目代码的方式，指在一个项目中管理多个模块/包（package）
+    ```bash
     ├── packages 其他模块放置在该目录下
     |   ├── pkg1
     |   |   ├── package.json
     |   ├── pkg2
     |   |   ├── package.json
     ├── package.json 第一层内容
+    ```
 
     2. 使用 monorepo 好处：多模块在一个项目下，方便开发调试（依赖的模块不需要单独下载repo，依赖多模块时可以统一调试，发版， 方便管理）
     3. 弊端：repo 体积可能会很大， 因为每个 package 理论上是独立的，因此都有自己的 dependencies， 这时，不同的模块可能安装了相同的依赖， install 时会出现重复安装，导致 node_module 膨胀
@@ -46,7 +50,7 @@
         2. npm 包重复安装
 
 ```bash
-node_modules 软链到 node_modules 下的 .pnpm 目录下的真实依赖， 真实依赖通过 hard link 存储到全局 store 中
+# node_modules 软链到 node_modules 下的 .pnpm 目录下的真实依赖， 真实依赖通过 hard link 存储到全局 store 中
 └── bar // symlink to .pnpm/bar@1.0.0/node_modules/bar
 └── foo // symlink to .pnpm/foo@1.0.0/node_modules/foo
 └── .pnpm
