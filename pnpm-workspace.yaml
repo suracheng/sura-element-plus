@@ -1,0 +1,4 @@
+packages: 
+  - packages/** # packages 下的所有目录
+  - play # 组件测试
+  # - docs # 存放文档

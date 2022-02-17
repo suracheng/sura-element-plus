@@ -1,0 +1,116 @@
+<mxfile host="65bd71144e">
+    <diagram id="pHFz80iZmxUwSog4Gy0I" name="第 1 页">
+        <mxGraphModel dx="917" dy="408" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="npm run build" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="301" y="62" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="build/gulpfile.ts" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="301" y="145" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="&lt;span&gt;&amp;nbsp; 1. 清除dist目录&lt;br&gt;&amp;nbsp; 2. 创建文件c-plus&lt;br&gt;&amp;nbsp; 3. 查找packages文件，依次执行build命令&lt;br&gt;&amp;nbsp; 4. 执行packages/components下的文件打包&lt;br&gt;&amp;nbsp; 5. 生成.d.ts声明文件&lt;br&gt;&amp;nbsp; 6. 执行c-plus文件的打包流程&lt;br&gt;&amp;nbsp; 7. 拷贝json文件&lt;br&gt;&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="456" y="90" width="244" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="执行utils 打包&lt;br&gt;gulpfile.ts" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="127" y="222" width="150" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="执行theme-chalk打包&lt;br&gt;gulpfile.ts" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="287" y="222" width="150" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" value="执行组件打包&lt;br&gt;buildComponent&lt;br&gt;buildFullComponent" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=0" parent="1" vertex="1">
+                    <mxGeometry x="447" y="222" width="150" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" value="&lt;span&gt;生成.d.ts文件&lt;/span&gt;&lt;br&gt;&lt;span&gt;组件打包(esm/cjs)&lt;/span&gt;&lt;br&gt;&lt;span&gt;组件库入口打包&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="462" y="302" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" style="edgeStyle=none;html=1;" parent="1" source="19" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="287" y="486.5625" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="19" value="theme-chalk 打包" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="127" y="460" width="120" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" value="gulp&amp;nbsp;&lt;br&gt;样式处理 scss -&amp;gt; css-&amp;gt;添加前缀 -&amp;gt; 压缩&amp;nbsp;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="289" y="460" width="241" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="29" style="edgeStyle=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="25" target="26" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="25" value="utils 打包" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="127" y="527" width="120" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="26" value="build：&lt;br&gt;ts 文件编译为 js 文件，生成.d.ts声明文件输出" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="289" y="527" width="251" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="30" style="edgeStyle=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="31" target="32" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="33" style="edgeStyle=none;html=1;" parent="1" source="31" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="80" y="794" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="31" value="components 打包" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="20" y="710" width="120" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="35" style="edgeStyle=none;html=1;" parent="1" source="32" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="353" y="735" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="32" value="eachComponent&lt;br&gt;package/components" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="182" y="710" width="131" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="44" value="" style="edgeStyle=none;html=1;" parent="1" source="34" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="80" y="870" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="34" value="fullComponent&lt;br&gt;package/c-plus" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="20" y="794" width="120" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="37" style="edgeStyle=none;html=1;" parent="1" source="36" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="513" y="735" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="41" value="" style="edgeStyle=none;html=1;" parent="1" source="36" target="40" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="36" value="分别对 packages/component 中的每个组件进行打包处理" style="rounded=0;whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="353" y="700" width="131" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="47" value="" style="edgeStyle=none;html=1;" parent="1" source="38" target="46" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="38" value="输出dist/c-plus/es(lib)" style="rounded=0;whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="513" y="700" width="131" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="39" value="rollup 打包&lt;br&gt;入口&lt;br&gt;插件处理&lt;br&gt;输出&lt;br&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="359.25" y="620" width="114.5" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="40" value="生成对应的.d.ts文件&lt;br&gt;ts-morph" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="358.5" y="789" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="51" value="" style="edgeStyle=none;html=1;" parent="1" source="42" target="50" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="42" value="打包paceage/c-plus/index&lt;br&gt;两种格式 esm / umd&lt;br&gt;作为dist入口文件 index.js /index.esm.js" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="20" y="872" width="180" height="73" as="geometry"/>
+                </mxCell>
+                <mxCell id="46" value="打包 packages/components/index&amp;nbsp;&lt;br&gt;输出es/lib / components/index" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="670" y="705" width="140" height="65" as="geometry"/>
+                </mxCell>
+                <mxCell id="50" value="打包入口&lt;br&gt;package/c-plus的index 输出es/lib下作为入口文件" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="20" y="980" width="180" height="73" as="geometry"/>
+                </mxCell>
+                <mxCell id="52" value="根据package/c-plus/index.ts 生成.d.ts文件输出到es/lib下" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="233" y="910" width="147" height="60" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
